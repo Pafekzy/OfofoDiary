@@ -6,10 +6,10 @@ import Ofofo.service.DiaryServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class DiaryServiceImplTest {
     private DiaryServiceImpl diaryService;
@@ -30,10 +30,10 @@ public class DiaryServiceImplTest {
 
         // Assert
         List<DiaryEntry> entries = diaryService.getAllEntries();
-        assertEquals(1, entries.size());
         DiaryEntry retrievedEntry = entries.get(0);
         assertEquals(title, retrievedEntry.getTitle());
         assertEquals(content, retrievedEntry.getContent());
         assertNotNull(retrievedEntry.getDate());
+        assertEquals(1, entries.size());
     }
 }

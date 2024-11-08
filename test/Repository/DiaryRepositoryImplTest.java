@@ -29,8 +29,8 @@ public class DiaryRepositoryImplTest {
 
         // Assert
         List<DiaryEntry> entries = diaryRepository.getAllEntries();
-        assertEquals(2, entries.size());
         assertEquals("Entry 1", entries.get(0).getTitle());
         assertEquals("Entry 2", entries.get(1).getTitle());
+        assertEquals(2, entries.size());
     }
 }
